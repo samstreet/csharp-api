@@ -1,0 +1,8 @@
+/Users/haxxor/Projects/webapi/bin/Debug/netcoreapp1.1/webapi.deps.json
+/Users/haxxor/Projects/webapi/bin/Debug/netcoreapp1.1/webapi.runtimeconfig.json
+/Users/haxxor/Projects/webapi/bin/Debug/netcoreapp1.1/webapi.runtimeconfig.dev.json
+/Users/haxxor/Projects/webapi/bin/Debug/netcoreapp1.1/webapi.dll
+/Users/haxxor/Projects/webapi/bin/Debug/netcoreapp1.1/webapi.pdb
+/Users/haxxor/Projects/webapi/obj/Debug/netcoreapp1.1/webapi.AssemblyInfo.cs
+/Users/haxxor/Projects/webapi/obj/Debug/netcoreapp1.1/webapi.dll
+/Users/haxxor/Projects/webapi/obj/Debug/netcoreapp1.1/webapi.pdb
