@@ -5,7 +5,7 @@ using webapi.Interfaces;
 
 namespace webapi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public class TodosController : Controller
     {
         private readonly ITodoRepository _ItodoRepository;
