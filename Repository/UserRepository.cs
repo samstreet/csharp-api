@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using webapi.Interfaces;
 using webapi.Models;
+using System;
 
 namespace webapi.Repository
 {
@@ -14,7 +15,7 @@ namespace webapi.Repository
             _context = context;
 
             if( _context.Users.Count() == 0)
-                Add(new User { FirstName = "Sam", LastName = "Street", PublicId = "qwertyuiop" });
+                Add(new User { FirstName = "Sam", LastName = "Street", PublicId = "qwertyuiop", Username = "sam", Password = "1234" });
         }
 
         public IEnumerable<User> GetAll()
@@ -46,6 +47,12 @@ namespace webapi.Repository
         {
             _context.Users.Update(item);
             _context.SaveChanges();
+        }
+
+        public Token Authenticate(User user)
+        {
+            var entity = _context.Users.First(t => t.Username == user.Username);
+            return new Token{ Name = user.Username + "_", Expires = DateTime.Now.AddHours(24), GeneratedToken = "ballsack", IsActive = true};
         }
     }
 }

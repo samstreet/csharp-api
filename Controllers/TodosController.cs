@@ -29,7 +29,7 @@ namespace webapi.Controllers
             {
                 return NotFound();
             }
-            return Ok(item);
+            return new ObjectResult(item);
         }
 
         [HttpPost]

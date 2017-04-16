@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using webapi.Models;
 using webapi.DTO;
 using webapi.Interfaces;
 
