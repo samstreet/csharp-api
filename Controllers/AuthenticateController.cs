@@ -1,17 +1,20 @@
 using Microsoft.AspNetCore.Mvc;
 using webapi.DTO;
 using webapi.Interfaces;
+using webapi.Repository;
 
 namespace webapi.Controllers
 {
     [Route("api/v1/[controller]")]
     public class AuthenticateController : Controller
     {
-        private readonly IAuthRepository _IauthRepository;
+        private readonly AuthRepository _AuthRepository;
+        private readonly UserRepository _UserRepository;
 
-        public AuthenticateController(IAuthRepository authRepository)
+        public AuthenticateController(AuthRepository AuthRepository, UserRepository UserRepository)
         {
-            _IauthRepository = authRepository; 
+            _AuthRepository = AuthRepository; 
+            _UserRepository = UserRepository;
         }
 
         [HttpPost]
@@ -21,6 +24,10 @@ namespace webapi.Controllers
             {
                 return BadRequest();
             }
+
+            User user = _UserRepository.Find();
+
+            _AuthRepository.Authenticate();
 
             return Ok(value);
 

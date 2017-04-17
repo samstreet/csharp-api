@@ -8,5 +8,6 @@ namespace webapi.Interfaces
         Token Find(long key);
         void Remove(long key);
         void Update(Token item);
+        Token Authenticate(User user);
     }
 }

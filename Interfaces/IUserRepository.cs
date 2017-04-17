@@ -8,6 +8,6 @@ namespace webapi.Interfaces
         User FindById(int id);
         void Remove(long key);
         void Update(User item);
-        Token Authenticate(User user);
+        User Find(string param, string type = "Username");
     }
 }
