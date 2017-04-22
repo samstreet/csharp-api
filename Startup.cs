@@ -7,6 +7,7 @@ using webapi.Models;
 using webapi.Interfaces;
 using webapi.Repository;
 using Microsoft.EntityFrameworkCore;
+using webapi.Services;
 
 namespace webapi
 {
@@ -34,6 +35,7 @@ namespace webapi
             services.AddScoped<ITodoRepository, TodoRepository>();
             services.AddScoped<IAuthRepository, AuthRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddSingleton<UserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

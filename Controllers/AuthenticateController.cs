@@ -25,7 +25,7 @@ namespace webapi.Controllers
                 return BadRequest();
             }
 
-            User user = _UserRepository.Find();
+            User user = _AuthRepository.Find();
 
             _AuthRepository.Authenticate();
 

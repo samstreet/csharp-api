@@ -44,10 +44,9 @@ namespace webapi.Repository
             _context.SaveChanges();
         }
 
-        public Token Authenticate(User user)
+        public Token Authenticate(string username, string password)
         {
-            var entity = _context.Users.First(t => t.Username == user.Username);
-            return new Token{ Name = user.Username + "_", Expires = DateTime.Now.AddHours(24), GeneratedToken = "ballsack", IsActive = true};
+            return new Token{ Name = "Sam Street" + "_", Expires = DateTime.Now.AddHours(24), GeneratedToken = "ballsack", IsActive = true};
         }
     }
 }
